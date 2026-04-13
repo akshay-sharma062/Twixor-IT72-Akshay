@@ -1,0 +1,931 @@
+:root {
+    --primary: #e40046;
+    --dark: #1a1a2e;
+    --blue: #0066cc;
+    --bg: #f4f4f4;
+    --border: #eee;
+    --text: #333;
+    --text-muted: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #fff;
+    font-size: 12px;
+    border-bottom: 1px solid var(--border);
+    padding: 5px 0;
+    color: #555;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left span {
+    margin-right: 15px;
+}
+
+.top-bar-right a {
+    margin-left: 15px;
+}
+
+/* Header */
+.header {
+    background: #e40046;
+    color: #fff;
+    padding: 15px 0;
+    position: relative;
+}
+
+/* Actually header is white in Snapdeal, but primary red top? Wait, Image 1 typically has a white background for the header. Let me use white */
+.header {
+    background: #fff;
+    color: var(--text);
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.search-box {
+    display: flex;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+    height: 40px;
+}
+
+.search-box select {
+    padding: 0 10px;
+    border: none;
+    border-right: 1px solid #ccc;
+    outline: none;
+    background: #f9f9f9;
+    width: 140px;
+    font-size: 13px;
+    color: #555;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    background: var(--dark);
+    color: #fff;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+
+.header-right .icon-box {
+    color: var(--text);
+}
+
+.icon-box .icon {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.download-btn {
+    background: var(--primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+/* Login Dropdown */
+.login-wrapper {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
+    z-index: 1000;
+}
+
+.hover-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -50px;
+    width: 220px;
+    background: var(--dark);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.hover-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 65px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent var(--dark) transparent;
+}
+
+.login-wrapper:hover .hover-dropdown {
+    display: block;
+}
+
+.hover-dropdown a {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.hover-dropdown hr {
+    border-color: #333;
+    margin: 15px 0;
+    border-bottom: none;
+}
+
+.hover-dropdown p {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.hover-dropdown .register-link {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.hover-dropdown .login-btn {
+    display: block;
+    background: var(--primary);
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Navigation Menu */
+.nav {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 8px 0;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
+}
+
+.nav-item img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+}
+
+.nav-item span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+}
+
+.nav-item:hover span {
+    color: var(--primary);
+}
+
+/* Mega Menu */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-top: 3px solid var(--primary);
+    display: none;
+    z-index: 9999;
+    padding: 24px 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.mega-col h4 {
+    font-weight: 700;
+    font-size: 13px;
+    color: #222;
+    margin-bottom: 8px;
+    margin-top: 14px;
+}
+
+.mega-col a {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    padding: 2px 0;
+}
+
+.mega-col a:hover {
+    color: var(--primary);
+}
+
+.mega-col .view-all {
+    color: var(--blue);
+    font-weight: 500;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 350px;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.slide::before {
+    content: '';
+    position: абсолют;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+}
+
+.slide-1 {
+    background-color: #1a2a40;
+    background-image: url('https://n2.sdlcdn.com/imgs/app/homepage-banners/mens-tee-desktop-SDL938431093-1-b0e5a.jpg');
+}
+
+.slide-1::before {
+    display: none;
+}
+
+/* Image seems to have its own text area */
+.slide-2 {
+    background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200');
+}
+
+.slide-3 {
+    background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200');
+}
+
+.slide-4 {
+    background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200');
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+}
+
+.carousel-btn.left {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.carousel-btn.right {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+/* Trust Strip */
+.trust-strip {
+    background: #1a1a2e;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    border-radius: 4px;
+    display: flex;
+    padding: 15px 0;
+}
+
+.trust-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.trust-item:last-child {
+    border-right: none;
+}
+
+/* Common Card / Scroll Row Layout */
+.section-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 30px 0 20px;
+    color: #333;
+}
+
+.scroll-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 5px 5px 20px 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    scrollbar-width: thin;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 15px;
+    min-width: 180px;
+    transition: box-shadow 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Deal of the Day */
+.deal-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.deal-label {
+    display: block;
+    text-align: center;
+    background: #fff0f3;
+    color: var(--primary);
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+/* Campus Banner */
+.campus-banner {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: var(--dark);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 30px 60px;
+}
+
+.campus-info h3 {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.campus-info h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.campus-info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.campus-banner img {
+    height: 180px;
+    object-fit: contain;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* New Arrivals */
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #4caf50;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.current-price {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.original-price {
+    color: var(--text-muted);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+/* App Download Strip */
+.app-strip {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    align-items: center;
+}
+
+.app-strip-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.app-strip-left ul {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.qr-box {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    width: 60px;
+    height: 60px;
+}
+
+.qr-cell {
+    background: #000;
+}
+
+.qr-cell.white {
+    background: #fff;
+}
+
+.app-strip-right {
+    width: 200px;
+    height: 350px;
+    border: 8px solid #333;
+    border-radius: 30px;
+    position: relative;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.app-strip-right::before {
+    content: "Snapdeal App";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Explore More */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid .card img {
+    height: 160px;
+}
+
+.product-name {
+    font-size: 13px;
+    margin: 10px 0;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 38px;
+}
+
+.rating {
+    background: #55a835;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    width: fit-content;
+    margin-bottom: 8px;
+}
+
+.disc {
+    color: var(--primary);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.view-more {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 12px;
+    font-size: 15px;
+}
+
+/* Footer Sections */
+.footer {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.footer-col a {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #e40046;
+}
+
+.footer-col a.red-link {
+    color: #e40046;
+}
+
+.footer-payment-connect {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 60px;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-payment-connect h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.pay-img {
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px 8px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.pay-pill {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.social-icon-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.seo-footer-links-wrapper {
+    background: #f9f9f9;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.seo-footer-links {
+    padding: 20px 60px;
+    font-size: 12px;
+    line-height: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seo-footer-links p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.seo-footer-links strong {
+    color: #333;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.seo-footer-links a {
+    color: #555;
+    text-decoration: none;
+}
+
+.seo-footer-links a:hover {
+    color: #e40046;
+}
+
+.seo-footer-links span {
+    margin: 0 4px;
+    color: #aaa;
+}
+
+.about-snapdeal-wrapper {
+    background: #fff;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.about-snapdeal {
+    padding: 24px 60px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright-bar {
+    background: #1a1a1a;
+    width: 100%;
+}
+
+.copyright-bar-inner {
+    padding: 14px 60px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright-text {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.made-for-bharat {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.made-for-bharat span {
+    color: #e40046;
+}
