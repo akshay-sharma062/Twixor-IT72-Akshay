@@ -1928,3 +1928,33 @@ button {
         justify-content: center;
     }
 }
+/* Top Bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 40px; /* top-bar height */
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+}
+
+/* Navbar */
+.nav {
+    position: fixed;
+    top: 110px; /* header height */
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+}
+
+/* IMPORTANT: Content ko niche push karo */
+body {
+    padding-top: 170px; /* total height of topbar + header + nav */
+}
