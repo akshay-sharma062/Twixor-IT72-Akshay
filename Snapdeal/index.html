@@ -57,9 +57,10 @@
                     </div>
                 </div>
 
-                <div class="icon-box">
+                <div class="icon-box" id="cart-trigger" role="button" tabindex="0" aria-label="Open cart">
                     <span class="icon">🛒</span>
                     <span>My Cart</span>
+                    <span class="cart-count-badge" id="cart-count-badge">0</span>
                 </div>
 
                 <a href="#" class="download-btn">↗ Download App</a>
@@ -576,173 +577,23 @@
 
     <!-- Explore More Grid -->
     <h2 class="section-title">Explore More On Snapdeal</h2>
-    <div class="grid">
-        <!-- We will repeat these to make 20 products as requested -->
-        <!-- Row 1 -->
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Prod">
-            <p class="product-name">Nike Stylish Red Running Sneakers For Men Active Wear</p>
-            <div class="rating">⭐ 4.2 <span style="color:#ddd; margin-left:2px;">(124)</span></div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;">
-                <span class="current-price">₹1299</span>
-                <span class="original-price">₹2999</span>
-                <span class="disc">56% OFF</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Prod">
-            <p class="product-name">Premium Chronograph Leather Watch for Men</p>
-            <div class="rating">⭐ 4.5 <span style="color:#ddd; margin-left:2px;">(89)</span></div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;">
-                <span class="current-price">₹899</span><span class="original-price">₹1999</span><span class="disc">55%
-                    OFF</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300" alt="Prod">
-            <p class="product-name">Luxury Eau De Parfum Long Lasting Spray 100ml</p>
-            <div class="rating">⭐ 4.0 <span style="color:#ddd; margin-left:2px;">(45)</span></div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;">
-                <span class="current-price">₹450</span><span class="original-price">₹999</span><span class="disc">50%
-                    OFF</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300" alt="Prod">
-            <p class="product-name">UV Protection Aviator Sunglasses Unisex</p>
-            <div class="rating">⭐ 3.8 <span style="color:#ddd; margin-left:2px;">(211)</span></div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;">
-                <span class="current-price">₹299</span><span class="original-price">₹1499</span><span class="disc">80%
-                    OFF</span>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=300" alt="Prod">
-            <p class="product-name">Cotton Regular Fit T-Shirt Solid Navy Blue</p>
-            <div class="rating">⭐ 4.1 <span style="color:#ddd; margin-left:2px;">(340)</span></div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;">
-                <span class="current-price">₹349</span><span class="original-price">₹799</span><span class="disc">56%
-                    OFF</span>
-            </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="card"><img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300" alt="Prod">
-            <p class="product-name">Classic Leather Ankle Boots For Men</p>
-            <div class="rating">⭐ 4.3</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹1499</span><span class="original-price">₹3999</span><span class="disc">62%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=300" alt="Prod">
-            <p class="product-name">Smartphone Back Cover Transparent Bumper case</p>
-            <div class="rating">⭐ 4.6</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹199</span><span class="original-price">₹499</span><span class="disc">60%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300" alt="Prod">
-            <p class="product-name">Bluetooth Wireless Earbuds Noise Cancelling</p>
-            <div class="rating">⭐ 3.9</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹899</span><span class="original-price">₹2499</span><span class="disc">64%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?w=300" alt="Prod">
-            <p class="product-name">Laptop Backpack with USB Charging Port</p>
-            <div class="rating">⭐ 4.4</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹699</span><span class="original-price">₹1899</span><span class="disc">63%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300" alt="Prod">
-            <p class="product-name">Women's Casual A-Line Dress Floral Print</p>
-            <div class="rating">⭐ 4.1</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹549</span><span class="original-price">₹1299</span><span class="disc">57%
-                    OFF</span></div>
-        </div>
-
-        <!-- Row 3 -->
-        <div class="card"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=300" alt="Prod">
-            <p class="product-name">Fashionable Winter Trench Coat for Women</p>
-            <div class="rating">⭐ 4.7</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹1999</span><span class="original-price">₹4999</span><span class="disc">60%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://n4.sdlcdn.com/imgs/a/u/s/Nike-White-Sports-Shoes-SDL732498052-1-0d60a.jpg"
-                alt="Prod">
-            <p class="product-name">Nike Essential White Running Shoes</p>
-            <div class="rating">⭐ 4.2</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹2499</span><span class="original-price">₹4999</span><span class="disc">50%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://n2.sdlcdn.com/imgs/a/i/k/Roadster-Women-Blue-Dress-SDL398284193-1-7da03.jpg"
-                alt="Prod">
-            <p class="product-name">Roadster Women Blue Elegant Dress Solid</p>
-            <div class="rating">⭐ 4.0</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹799</span><span class="original-price">₹1999</span><span class="disc">60%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://n3.sdlcdn.com/imgs/a/p/p/Skybags-Black-Backpack-SDL089804765-1-70dd2.jpg"
-                alt="Prod">
-            <p class="product-name">Skybags Black Tough Backpack 30L</p>
-            <div class="rating">⭐ 4.5</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹999</span><span class="original-price">₹2499</span><span class="disc">60%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300" alt="Prod">
-            <p class="product-name">Trendy White Sneakers Men Casual Wear</p>
-            <div class="rating">⭐ 3.8</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹599</span><span class="original-price">₹1499</span><span class="disc">60%
-                    OFF</span></div>
-        </div>
-
-        <!-- Row 4 -->
-        <div class="card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" alt="Prod">
-            <p class="product-name">Nike Stylish Red Running Sneakers For Men Active Wear</p>
-            <div class="rating">⭐ 4.2</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹1299</span><span class="original-price">₹2999</span><span class="disc">56%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" alt="Prod">
-            <p class="product-name">Premium Chronograph Leather Watch for Men</p>
-            <div class="rating">⭐ 4.5</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹899</span><span class="original-price">₹1999</span><span class="disc">55%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300" alt="Prod">
-            <p class="product-name">Luxury Eau De Parfum Long Lasting Spray 100ml</p>
-            <div class="rating">⭐ 4.0</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹450</span><span class="original-price">₹999</span><span class="disc">50%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300" alt="Prod">
-            <p class="product-name">UV Protection Aviator Sunglasses Unisex</p>
-            <div class="rating">⭐ 3.8</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹299</span><span class="original-price">₹1499</span><span class="disc">80%
-                    OFF</span></div>
-        </div>
-        <div class="card"><img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=300" alt="Prod">
-            <p class="product-name">Cotton Regular Fit T-Shirt Solid Navy Blue</p>
-            <div class="rating">⭐ 4.1</div>
-            <div class="price-row" style="justify-content: flex-start; margin-top: auto;"><span
-                    class="current-price">₹349</span><span class="original-price">₹799</span><span class="disc">56%
-                    OFF</span></div>
-        </div>
-
-    </div>
+    <div class="grid" id="products-grid"></div>
 
     <a href="#" class="btn view-more">View More</a>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h3>My Cart</h3>
+                <button type="button" class="cart-close-btn" id="cart-close-btn">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <strong id="cart-total">₹0</strong>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -928,75 +779,7 @@
     </footer>
 
 
-    <script>
-        // --- Mega Menu JS Logic ---
-        const navItems = document.querySelectorAll('.nav-item');
-
-        navItems.forEach(item => {
-            const menu = item.querySelector('.mega-menu');
-            if (menu) {
-                item.addEventListener('mouseenter', () => {
-                    menu.style.display = 'grid';
-                });
-                item.addEventListener('mouseleave', () => {
-                    menu.style.display = 'none';
-                });
-            }
-        });
-
-        // --- Carousel JS Logic ---
-        const slides = document.getElementById('slides');
-        const dotElements = document.querySelectorAll('.dot');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const carouselContainer = document.getElementById('carousel');
-
-        let currentIndex = 0;
-        const totalSlides = 4;
-        let autoSlideInterval;
-
-        function goToSlide(index) {
-            if (index < 0) index = totalSlides - 1;
-            if (index >= totalSlides) index = 0;
-
-            slides.style.transform = `translateX(-${index * 25}%)`;
-
-            dotElements.forEach(d => d.classList.remove('active'));
-            if (dotElements[index]) dotElements[index].classList.add('active');
-
-            currentIndex = index;
-        }
-
-        function nextSlide() { goToSlide(currentIndex + 1); }
-        function prevSlide() { goToSlide(currentIndex - 1); }
-
-        prevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
-        nextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
-
-        dotElements.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                goToSlide(index);
-                resetTimer();
-            });
-        });
-
-        function startTimer() {
-            autoSlideInterval = setInterval(nextSlide, 3000);
-        }
-
-        function resetTimer() {
-            clearInterval(autoSlideInterval);
-            startTimer();
-        }
-
-        // Pause on hover
-        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-        carouselContainer.addEventListener('mouseleave', startTimer);
-
-        // Initial Start
-        startTimer();
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
