@@ -1,0 +1,1960 @@
+:root {
+    --primary: #e40046;
+    --dark: #1a1a2e;
+    --blue: #0066cc;
+    --bg: #f4f4f4;
+    --border: #eee;
+    --text: #333;
+    --text-muted: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    background: var(--primary);
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Top Bar */
+.top-bar {
+    background: #f8eaea;
+    /* light pinkish tone like image */
+    font-size: 12px;
+    border-bottom: 1px solid #e0dada;
+    padding: 6px 0;
+    color: #333;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-left span {
+    margin-right: 12px;
+    position: relative;
+    padding-right: 12px;
+}
+
+/* Divider (|) */
+.top-bar-left span:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    color: #999;
+}
+
+.top-bar-right a {
+    margin-left: 15px;
+    color: #333;
+    font-size: 12px;
+}
+
+.top-bar-right a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+/* HEADER */
+.header {
+    background: #fff;
+    /* light grey like Snapdeal */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* CONTAINER */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* LOGO */
+.logo img {
+    height: 28px;
+}
+
+/* SEARCH BOX (FIXED SMALL SIZE) */
+.search-box {
+    flex: 0.5;
+    /* smaller width */
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 34px;
+    min-width: 541px;
+}
+
+/* REMOVE CATEGORY DROPDOWN */
+.search-box select {
+    display: none;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0 12px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: #777;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    padding: 0px 0px 0px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* RIGHT SECTION */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ICON BOX */
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-count-badge {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    padding: 0 5px;
+    font-weight: 700;
+}
+
+.icon-box .icon {
+    font-size: 18px;
+    margin-bottom: 2px;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn {
+    background: #e40046;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* LOGIN DROPDOWN */
+.login-wrapper {
+    position: relative;
+    /* padding-bottom: 10px; */
+}
+
+/* DROPDOWN BOX */
+.hover-dropdown {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 220px;
+    background: #222;
+    color: #fff;
+    border-radius: 6px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* DROPDOWN ARROW */
+.hover-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent;
+}
+
+/* HOVER SHOW */
+.login-wrapper:hover .hover-dropdown {
+    display: block;
+}
+
+/* DROPDOWN LINKS */
+.hover-dropdown a {
+    display: block;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.hover-dropdown hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 10px 0;
+}
+
+.hover-dropdown p {
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    display: block;
+    background: #e40046;
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Navigation Menu */
+.nav {
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 998;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 8px 0;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 5px;
+    /* padding: 6px 14px; */
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
+}
+
+.nav-item img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #eee;
+}
+
+.nav-item span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+}
+
+.nav-item:hover span {
+    color: var(--primary);
+}
+
+/* Mega Menu */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-top: 3px solid var(--primary);
+    display: none;
+    z-index: 9999;
+    padding: 24px 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+}
+
+.mega-col h4 {
+    font-weight: 700;
+    font-size: 13px;
+    color: #222;
+    margin-bottom: 8px;
+    margin-top: 14px;
+}
+
+.mega-col a {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    padding: 2px 0;
+}
+
+.mega-col a:hover {
+    color: var(--primary);
+}
+
+.mega-col .view-all {
+    color: var(--blue);
+    font-weight: 500;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 350px;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 50%;
+}
+
+.slide-1 {
+    background-color: #1a2a40;
+    background-image: url('https://n2.sdlcdn.com/imgs/app/homepage-banners/mens-tee-desktop-SDL938431093-1-b0e5a.jpg');
+}
+
+.slide-1::before {
+    display: none;
+}
+
+/* Image seems to have its own text area */
+.slide-2 {
+    background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200');
+}
+
+.slide-3 {
+    background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200');
+}
+
+.slide-4 {
+    background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200');
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+}
+
+.carousel-btn.left {
+    left: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.carousel-btn.right {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #fff;
+}
+
+/* Trust Strip */
+.trust-strip {
+    background: #1a1a2e;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    border-radius: 4px;
+    display: flex;
+    padding: 15px 0;
+}
+
+.trust-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.trust-item:last-child {
+    border-right: none;
+}
+
+/* Common Card / Scroll Row Layout */
+.section-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 30px 0 20px;
+    color: #333;
+}
+
+.scroll-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 5px 5px 20px 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    scrollbar-width: thin;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 15px;
+    min-width: 180px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Deal of the Day */
+.deal-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.deal-label {
+    display: block;
+    text-align: center;
+    background: #fff0f3;
+    color: var(--primary);
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+/* Campus Banner */
+.campus-banner {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: var(--dark);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 30px 60px;
+}
+
+.campus-info h3 {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.campus-info h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.campus-info p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.campus-banner img {
+    height: 180px;
+    object-fit: contain;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* New Arrivals */
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #4caf50;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.current-price {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.original-price {
+    color: var(--text-muted);
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+/* App Download Strip */
+.app-strip {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px;
+    align-items: center;
+}
+
+.app-strip-left h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.app-strip-left ul {
+    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.qr-box {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    width: 60px;
+    height: 60px;
+}
+
+.qr-cell {
+    background: #000;
+}
+
+.qr-cell.white {
+    background: #fff;
+}
+
+.app-strip-right {
+    width: 200px;
+    height: 350px;
+    border: 8px solid #333;
+    border-radius: 30px;
+    position: relative;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.app-strip-right::before {
+    content: "Snapdeal App";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Explore More */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid .card img {
+    height: 160px;
+}
+
+.product-name {
+    font-size: 13px;
+    margin: 10px 0;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 38px;
+}
+
+.rating {
+    background: #55a835;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    width: fit-content;
+    margin-bottom: 8px;
+}
+
+.disc {
+    color: var(--primary);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.view-more {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.add-to-cart-btn {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.cart-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    padding: 16px;
+}
+
+.cart-modal.open {
+    display: flex;
+}
+
+.cart-modal-content {
+    width: 100%;
+    max-width: 460px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.cart-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.cart-close-btn {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.cart-item-name {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.cart-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.remove-cart-btn {
+    border: none;
+    background: #fbe6eb;
+    color: var(--primary);
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-total-row {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+/* Footer Sections */
+.footer {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.footer-col a {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: #e40046;
+}
+
+.footer-col a.red-link {
+    color: #e40046;
+}
+
+.footer-payment-connect {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 60px;
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-payment-connect h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.pay-img {
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px 8px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.pay-pill {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.social-icon-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.seo-footer-links-wrapper {
+    background: #f9f9f9;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.seo-footer-links {
+    padding: 20px 60px;
+    font-size: 12px;
+    line-height: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.seo-footer-links p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.seo-footer-links strong {
+    color: #333;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.seo-footer-links a {
+    color: #555;
+    text-decoration: none;
+}
+
+.seo-footer-links a:hover {
+    color: #e40046;
+}
+
+.seo-footer-links span {
+    margin: 0 4px;
+    color: #aaa;
+}
+
+.about-snapdeal-wrapper {
+    background: #fff;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.about-snapdeal {
+    padding: 24px 60px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright-bar {
+    background: #1a1a1a;
+    width: 100%;
+}
+
+.copyright-bar-inner {
+    padding: 14px 60px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright-text {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.made-for-bharat {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.made-for-bharat span {
+    color: #e40046;
+}
+
+/* ============================================
+   RESPONSIVE CSS - ADD AT END OF YOUR CSS FILE
+   ============================================ */
+
+/* Global Base Fixes */
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================
+   TABLET — 768px to 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+
+    /* Top Bar */
+    .top-bar .container {
+        padding: 0 20px;
+    }
+
+    .top-bar-right a {
+        margin-left: 10px;
+    }
+
+    /* Header */
+    .header-container {
+        padding: 0 20px;
+        gap: 14px;
+    }
+
+    .search-box {
+        min-width: unset;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .logo img {
+        height: 24px;
+    }
+
+    /* Nav */
+    .nav-bar {
+        padding: 8px 16px;
+        gap: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+    }
+
+    .nav-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-item {
+        padding: 6px 10px;
+    }
+
+    .nav-item img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .nav-item span {
+        font-size: 11px;
+    }
+
+    /* Carousel */
+    .carousel {
+        margin: 14px 20px;
+        height: 300px;
+    }
+
+    .slide {
+        padding: 0 40px;
+    }
+
+    /* Trust */
+    .trust-strip {
+        margin: 0 20px 20px;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 20px;
+    }
+
+    .scroll-row {
+        padding: 5px 20px 20px;
+    }
+
+    .card {
+        min-width: 160px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    /* Campus Banner */
+    .campus-banner {
+        margin: 20px 20px;
+        padding: 24px 36px;
+    }
+
+    .campus-info h2 {
+        font-size: 32px;
+    }
+
+    .campus-banner img {
+        height: 140px;
+    }
+
+    /* App Strip */
+    .app-strip {
+        margin: 24px 20px;
+        padding: 24px 32px;
+    }
+
+    .app-strip-left h2 {
+        font-size: 22px;
+    }
+
+    .app-strip-right {
+        width: 160px;
+        height: 280px;
+    }
+
+    /* Product Grid */
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin: 0 20px;
+    }
+
+    .grid .card img {
+        height: 140px;
+    }
+
+    /* View More */
+    .view-more {
+        width: 180px;
+    }
+
+    /* Footer */
+    .footer-links-grid {
+        padding: 30px 30px;
+        gap: 24px;
+    }
+
+    .footer-payment-connect {
+        padding: 20px 30px;
+    }
+
+    .seo-footer-links {
+        padding: 16px 30px;
+    }
+
+    .about-snapdeal {
+        padding: 20px 30px;
+    }
+
+    .copyright-bar-inner {
+        padding: 12px 30px;
+    }
+
+    /* Mega Menu */
+    .mega-menu {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 20px;
+        gap: 20px;
+    }
+}
+
+/* ============================================
+   MOBILE LARGE — 481px to 767px
+   ============================================ */
+@media (max-width: 767px) {
+
+    /* Top Bar */
+    .top-bar {
+        padding: 5px 0;
+    }
+
+    .top-bar .container {
+        padding: 0 14px;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .top-bar-left span {
+        font-size: 11px;
+        margin-right: 8px;
+        padding-right: 8px;
+    }
+
+    .top-bar-right {
+        display: none;
+    }
+
+    /* Header */
+    .header {
+        padding: 8px 0;
+    }
+
+    .header-container {
+        padding: 0 14px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .logo img {
+        height: 22px;
+    }
+
+    .header-right {
+        order: 2;
+        margin-left: auto;
+        gap: 14px;
+    }
+
+    .search-box {
+        order: 3;
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        flex: unset;
+        height: 38px;
+    }
+
+    .download-btn {
+        display: none;
+    }
+
+    .icon-box {
+        font-size: 11px;
+    }
+
+    .icon-box .icon {
+        font-size: 16px;
+    }
+
+    /* Login Dropdown */
+    .hover-dropdown {
+        right: -10px;
+        width: 200px;
+    }
+
+    /* Nav */
+    .nav-bar {
+        padding: 6px 12px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .nav-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-item {
+        padding: 4px 8px;
+        min-width: fit-content;
+        border-bottom: 3px solid transparent;
+    }
+
+    .nav-item img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .nav-item span {
+        font-size: 10px;
+    }
+
+    /* Mega Menu */
+    .mega-menu {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 16px;
+        gap: 14px;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .mega-col h4 {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .mega-col a {
+        font-size: 11px;
+    }
+
+    /* Carousel */
+    .carousel {
+        margin: 10px 12px;
+        height: 220px;
+        border-radius: 8px;
+    }
+
+    .slide {
+        padding: 0 20px;
+    }
+
+    .slide-content h2 {
+        font-size: 22px;
+    }
+
+    .slide-content p {
+        font-size: 13px;
+    }
+
+    .carousel-btn {
+        padding: 10px 8px;
+        font-size: 16px;
+    }
+
+    .dots {
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* Trust Strip */
+    .trust-strip {
+        margin: 0 12px 16px;
+        flex-direction: column;
+        padding: 10px 0;
+        border-radius: 6px;
+    }
+
+    .trust-item {
+        border-right: none;
+        border-bottom: 1px solid #333;
+        padding: 10px 16px;
+        justify-content: flex-start;
+    }
+
+    .trust-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 17px;
+        margin: 20px 0 14px;
+    }
+
+    /* Scroll Rows */
+    .scroll-row {
+        padding: 5px 12px 16px;
+        gap: 10px;
+    }
+
+    .card {
+        min-width: 140px;
+        padding: 10px;
+    }
+
+    .card img {
+        height: 110px;
+    }
+
+    .deal-label {
+        font-size: 11px;
+    }
+
+    /* Campus Banner */
+    .campus-banner {
+        margin: 16px 12px;
+        padding: 20px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        border-radius: 8px;
+    }
+
+    .campus-info h3 {
+        font-size: 16px;
+    }
+
+    .campus-info h2 {
+        font-size: 26px;
+    }
+
+    .campus-info p {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    .campus-banner img {
+        height: 100px;
+        align-self: flex-end;
+    }
+
+    /* App Strip */
+    .app-strip {
+        margin: 16px 12px;
+        padding: 20px 20px;
+        flex-direction: column;
+        gap: 16px;
+        border-radius: 8px;
+    }
+
+    .app-strip-left h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .app-strip-left ul {
+        font-size: 13px;
+    }
+
+    .app-strip-right {
+        display: none;
+    }
+
+    /* Product Grid */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 0 12px;
+    }
+
+    .grid .card img {
+        height: 130px;
+    }
+
+    .product-name {
+        font-size: 12px;
+        height: 34px;
+    }
+
+    .current-price {
+        font-size: 13px;
+    }
+
+    .original-price {
+        font-size: 11px;
+    }
+
+    .disc {
+        font-size: 11px;
+    }
+
+    .rating {
+        font-size: 10px;
+    }
+
+    /* View More */
+    .view-more {
+        width: 160px;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* Footer Links Grid */
+    .footer-links-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 24px 16px;
+        gap: 20px;
+    }
+
+    .footer-col h4 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .footer-col a {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    /* Footer Payment Connect */
+    .footer-payment-connect {
+        flex-direction: column;
+        padding: 20px 16px;
+        gap: 20px;
+    }
+
+    .payment-icons {
+        gap: 8px;
+    }
+
+    .pay-img {
+        height: 22px;
+        padding: 2px 6px;
+    }
+
+    .social-icon-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .pay-pill {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    /* SEO Footer */
+    .seo-footer-links {
+        padding: 14px 16px;
+        font-size: 11px;
+        line-height: 1.9;
+    }
+
+    .seo-footer-links p {
+        margin-bottom: 10px;
+    }
+
+    /* About Snapdeal */
+    .about-snapdeal {
+        padding: 16px;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    /* Copyright */
+    .copyright-bar-inner {
+        padding: 12px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        text-align: center;
+    }
+
+    .copyright-text,
+    .made-for-bharat {
+        font-size: 11px;
+    }
+}
+
+/* ============================================
+   MOBILE SMALL — up to 480px
+   ============================================ */
+@media (max-width: 480px) {
+
+    /* Top Bar */
+    .top-bar-left span {
+        font-size: 10px;
+        margin-right: 6px;
+        padding-right: 6px;
+    }
+
+    /* Header */
+    .header-container {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 20px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .icon-box {
+        font-size: 10px;
+    }
+
+    .icon-box .icon {
+        font-size: 15px;
+    }
+
+    .search-box {
+        height: 36px;
+    }
+
+    .search-box input {
+        font-size: 12px;
+    }
+
+    /* Nav */
+    .nav-bar {
+        padding: 4px 8px;
+    }
+
+    .nav-item {
+        padding: 4px 6px;
+    }
+
+    .nav-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-item span {
+        font-size: 9px;
+    }
+
+    /* Mega Menu */
+    .mega-menu {
+        grid-template-columns: 1fr;
+        padding: 12px;
+        gap: 10px;
+        max-height: 55vh;
+        overflow-y: auto;
+    }
+
+    /* Carousel */
+    .carousel {
+        margin: 8px 10px;
+        height: 180px;
+    }
+
+    .slide {
+        padding: 0 14px;
+    }
+
+    .slide-content h2 {
+        font-size: 18px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+    }
+
+    .carousel-btn {
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+
+    /* Trust Strip */
+    .trust-strip {
+        margin: 0 10px 12px;
+    }
+
+    .trust-item {
+        font-size: 13px;
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 16px;
+        margin: 16px 0 12px;
+    }
+
+    /* Cards */
+    .scroll-row {
+        padding: 4px 10px 14px;
+        gap: 8px;
+    }
+
+    .card {
+        min-width: 128px;
+        padding: 8px;
+    }
+
+    .card img {
+        height: 100px;
+    }
+
+    /* Campus Banner */
+    .campus-banner {
+        margin: 12px 10px;
+        padding: 16px;
+    }
+
+    .campus-info h2 {
+        font-size: 22px;
+    }
+
+    .campus-info p {
+        font-size: 14px;
+    }
+
+    .campus-banner img {
+        height: 80px;
+    }
+
+    .campus-info .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /* App Strip */
+    .app-strip {
+        margin: 12px 10px;
+        padding: 16px;
+    }
+
+    .app-strip-left h2 {
+        font-size: 17px;
+    }
+
+    .app-strip-left ul {
+        font-size: 12px;
+    }
+
+    /* Product Grid */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin: 0 10px;
+    }
+
+    .grid .card img {
+        height: 110px;
+    }
+
+    .product-name {
+        font-size: 11px;
+        height: 30px;
+    }
+
+    .price-row {
+        gap: 5px;
+    }
+
+    .current-price {
+        font-size: 12px;
+    }
+
+    /* View More */
+    .view-more {
+        width: 140px;
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .footer-links-grid {
+        grid-template-columns: 1fr;
+        padding: 18px 12px;
+        gap: 14px;
+    }
+
+    .footer-col h4 {
+        font-size: 11px;
+    }
+
+    .footer-col a {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .footer-payment-connect {
+        padding: 16px 12px;
+    }
+
+    .social-icon-img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .pay-img {
+        height: 20px;
+    }
+
+    .seo-footer-links {
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .about-snapdeal {
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .copyright-bar-inner {
+        padding: 10px 12px;
+    }
+
+    .copyright-text,
+    .made-for-bharat {
+        font-size: 10px;
+    }
+}
+
+/* ============================================
+   VERY SMALL — up to 360px
+   ============================================ */
+@media (max-width: 360px) {
+
+    .nav-item img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .nav-item span {
+        font-size: 8px;
+    }
+
+    .carousel {
+        height: 160px;
+    }
+
+    .slide-content h2 {
+        font-size: 15px;
+    }
+
+    .card {
+        min-width: 115px;
+    }
+
+    .card img {
+        height: 90px;
+    }
+
+    .grid .card img {
+        height: 95px;
+    }
+
+    .campus-info h2 {
+        font-size: 19px;
+    }
+
+    .campus-banner img {
+        height: 65px;
+    }
+
+    .icon-box .icon {
+        font-size: 14px;
+    }
+
+    .logo img {
+        height: 18px;
+    }
+}
+
+/* ============================================
+   TOUCH & SCROLL FIXES (ALL MOBILE)
+   ============================================ */
+@media (max-width: 767px) {
+
+    .scroll-row,
+    .nav-bar {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        scroll-snap-align: start;
+    }
+
+    button,
+    a {
+        min-height: 36px;
+    }
+
+    .btn {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+/* Top Bar */
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 40px; /* top-bar height */
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+}
+
+/* Navbar */
+.nav {
+    position: fixed;
+    top: 110px; /* header height */
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+}
+
+/* IMPORTANT: Content ko niche push karo */
+body {
+    padding-top: 170px; /* total height of topbar + header + nav */
+}
