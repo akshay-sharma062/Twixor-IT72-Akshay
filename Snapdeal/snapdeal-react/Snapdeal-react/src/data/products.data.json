@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "name": "Nike Stylish Red Running Sneakers For Men Active Wear",
+      "category": "mens",
+      "price": 1299,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300"
+    },
+    {
+      "id": 2,
+      "name": "Premium Chronograph Leather Watch for Men",
+      "category": "mens",
+      "price": 899,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300"
+    },
+    {
+      "id": 3,
+      "name": "Luxury Eau De Parfum Long Lasting Spray 100ml",
+      "category": "womens",
+      "price": 450,
+      "image": "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=300"
+    },
+    {
+      "id": 4,
+      "name": "UV Protection Aviator Sunglasses Unisex",
+      "category": "womens",
+      "price": 299,
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300"
+    },
+    {
+      "id": 5,
+      "name": "Cotton Regular Fit T-Shirt Solid Navy Blue",
+      "category": "mens",
+      "price": 349,
+      "image": "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=300"
+    },
+    {
+      "id": 6,
+      "name": "Classic Leather Ankle Boots For Men",
+      "category": "mens",
+      "price": 1499,
+      "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=300"
+    },
+    {
+      "id": 7,
+      "name": "Smartphone Back Cover Transparent Bumper Case",
+      "category": "kids",
+      "price": 199,
+      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=300"
+    },
+    {
+      "id": 8,
+      "name": "Bluetooth Wireless Earbuds Noise Cancelling",
+      "category": "kids",
+      "price": 899,
+      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300"
+    },
+    {
+      "id": 9,
+      "name": "Laptop Backpack with USB Charging Port",
+      "category": "kids",
+      "price": 699,
+      "image": "https://images.unsplash.com/photo-1540553016722-983e48a2cd10?w=300"
+    },
+    {
+      "id": 10,
+      "name": "Women's Casual A-Line Dress Floral Print",
+      "category": "womens",
+      "price": 549,
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=300"
+    },
+    {
+      "id": 11,
+      "name": "Fashionable Winter Trench Coat for Women",
+      "category": "womens",
+      "price": 1999,
+      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=300"
+    },
+    {
+      "id": 12,
+      "name": "Nike Essential White Running Shoes",
+      "category": "kids",
+      "price": 2499,
+     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300"
+    }
+  ]
